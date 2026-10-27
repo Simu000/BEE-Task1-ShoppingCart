@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile cards</title>
+    <link id="theme" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+    <div class="container">
+        <button class="dark">Dark</button>
+
+        <div class="shop-controls">
+            <label>
+                Brand
+                <select id="brand-filter">
+                    <option value="all">All Brands</option>
+                </select>
+            </label>
+
+            <label>
+                Sort by
+                <select id="sort-products">
+                    <option value="featured">Featured</option>
+                    <option value="low-to-high">Price: Low to High</option>
+                    <option value="high-to-low">Price: High to Low</option>
+                    <option value="name">Name</option>
+                </select>
+            </label>
+        </div>
+
+        <div id="card-container"></div>
+
+        <aside class="cart">
+            <h2>Cart</h2>
+            <div id="cart-items">
+                <p class="empty-cart">Your cart is empty.</p>
+            </div>
+
+            <div class="coupon-box">
+                <input id="coupon-input" type="text" placeholder="Coupon code" maxlength="20" />
+                <button id="apply-coupon">Apply</button>
+            </div>
+            <p id="coupon-message" class="coupon-message"></p>
+
+            <div class="checkout-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="subtotal-price">₹0</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <strong id="shipping-price">₹0</strong>
+                </div>
+                <div class="summary-row discount-row">
+                    <span>Discount</span>
+                    <strong id="discount-price">-₹0</strong>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <strong id="total-price">₹0</strong>
+                </div>
+            </div>
+
+            <button id="checkout-btn" class="checkout-btn">Checkout</button>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
